@@ -1,7 +1,7 @@
 function Snake() {
-  this.x = 0
+  this.x = 0;//start at top left corner
   this.y = 0;
-  this.xspeed = 1;
+  this.xspeed = 1;//start moving right
   this.yspeed = 0;
   this.size = 0;
   this.tail = [];
@@ -25,7 +25,7 @@ function Snake() {
     for (var i = 0; i < this.tail.length; i++) {
       var pos = this.tail[i];
       var d = dist(this.x, this.y, pos.x, pos.y);
-      if (d < 1) {
+      if (d < 1) { //just go back to size 0
         this.size = 0;
         this.tail = [];
       }
